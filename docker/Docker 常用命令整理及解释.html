@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 常用命令整理及解释 | Summer&#39;s blog</title>
+    <meta name="description" content="Make this world a better place.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.185a2026.css" as="style"><link rel="preload" href="/assets/js/app.b695821b.js" as="script"><link rel="preload" href="/assets/js/10.17745ebd.js" as="script"><link rel="prefetch" href="/assets/js/11.5645ee9a.js"><link rel="prefetch" href="/assets/js/12.395b2bf2.js"><link rel="prefetch" href="/assets/js/13.18252a63.js"><link rel="prefetch" href="/assets/js/14.61525ab5.js"><link rel="prefetch" href="/assets/js/15.52ed0127.js"><link rel="prefetch" href="/assets/js/16.63b7e756.js"><link rel="prefetch" href="/assets/js/17.4e01226f.js"><link rel="prefetch" href="/assets/js/18.5cd53c0d.js"><link rel="prefetch" href="/assets/js/19.46bc3fa8.js"><link rel="prefetch" href="/assets/js/20.01208775.js"><link rel="prefetch" href="/assets/js/21.6e21173b.js"><link rel="prefetch" href="/assets/js/22.2d7787ae.js"><link rel="prefetch" href="/assets/js/23.7e7a1388.js"><link rel="prefetch" href="/assets/js/24.1c06ca31.js"><link rel="prefetch" href="/assets/js/25.782d0acb.js"><link rel="prefetch" href="/assets/js/26.59ad7633.js"><link rel="prefetch" href="/assets/js/27.62dc372f.js"><link rel="prefetch" href="/assets/js/28.54aca11a.js"><link rel="prefetch" href="/assets/js/29.69a5f791.js"><link rel="prefetch" href="/assets/js/3.c805a3c1.js"><link rel="prefetch" href="/assets/js/30.c2c9829c.js"><link rel="prefetch" href="/assets/js/31.c8e338e9.js"><link rel="prefetch" href="/assets/js/32.0406beb2.js"><link rel="prefetch" href="/assets/js/33.e209690e.js"><link rel="prefetch" href="/assets/js/34.75c09e24.js"><link rel="prefetch" href="/assets/js/35.d077c8f5.js"><link rel="prefetch" href="/assets/js/36.0eafb227.js"><link rel="prefetch" href="/assets/js/37.08f12dfc.js"><link rel="prefetch" href="/assets/js/38.ba7cfe50.js"><link rel="prefetch" href="/assets/js/4.f47ff399.js"><link rel="prefetch" href="/assets/js/5.453c3a8d.js"><link rel="prefetch" href="/assets/js/6.4cee89cf.js"><link rel="prefetch" href="/assets/js/7.bed2d7de.js"><link rel="prefetch" href="/assets/js/8.d9847ac4.js"><link rel="prefetch" href="/assets/js/9.a0712f1c.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.26116af7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.185a2026.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Summer's blog" class="logo"> <span class="site-name can-hide">Summer's blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Categories</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link">前端</a></li><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link">后台</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link">Tags</a></div><div class="nav-item"><a href="https://gitee.com/springstart" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Categories</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/frontEnd.html" class="nav-link">前端</a></li><li class="dropdown-item"><!----> <a href="/categories/backEnd.html" class="nav-link">后台</a></li></ul></div></div><div class="nav-item"><a href="/tags/" class="nav-link">Tags</a></div><div class="nav-item"><a href="https://gitee.com/springstart" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Docker 常用命令整理及解释</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docker/Docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html#基本语法" class="sidebar-link">基本语法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/Docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html#客户端命令" class="sidebar-link">客户端命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/Docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html#镜像命令" class="sidebar-link">镜像命令</a></li><li class="sidebar-sub-header"><a href="/docker/Docker%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86%E5%8F%8A%E8%A7%A3%E9%87%8A.html#容器命令" class="sidebar-link">容器命令</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="docker-常用命令整理及解释"><a href="#docker-常用命令整理及解释" aria-hidden="true" class="header-anchor">#</a> Docker 常用命令整理及解释</h1> <h2 id="基本语法"><a href="#基本语法" aria-hidden="true" class="header-anchor">#</a> 基本语法</h2> <p>Docker 命令有两大类，客户端命令和服务端命令。前者是主要的操作接口，后者用来启动 Docker daemon。</p> <ul><li>客户端命令：基本命令格式为 <code>docker [OPTIONS] COMMAND [arg...]</code>；</li> <li>服务端命令：基本命令格式为 <code>docker daemon [OPTIONS]</code>。</li></ul> <h2 id="客户端命令"><a href="#客户端命令" aria-hidden="true" class="header-anchor">#</a> 客户端命令</h2> <p>可以通过 <code>man docker-COMMAND</code> 或 <code>docker help COMMAND</code> 来查看这些命令的具体用法。</p> <h3 id="镜像命令"><a href="#镜像命令" aria-hidden="true" class="header-anchor">#</a> 镜像命令</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>//搜索镜像
+docker search IMAGE
+
+//获取镜像
+docker pull IMAGE:TAG
+
+//查看镜像列表
+docker images
+
+//删除镜像
+docker rmi IMAGE
+
+//运行镜像
+docker run IMAGE
+//运行时常用配置项<span class="token punctuation">(</span>以mysql为例<span class="token punctuation">)</span>
+docker run -p 3306:3306 --name mysql-5.7.18 -v /Users/lason/docker/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD<span class="token operator">=</span>123123 -d mysql:5.7.18
+
+-p 9000:3306: 将容器的3306端口映射到主机的9000
+--name my-name: 设定容器的名称为 my-name
+-v <span class="token variable">$DIR</span>/conf:/etc/mysql/conf.d: 将主机当前目录下的<span class="token variable">$DIR</span>/conf挂载到容器的/etc/mysql/conf.d
+-d: 保持后台运行
+-e: 指定环境变量，容器中可以使用该环境变量 此处为初始化root用户的密码
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="容器命令"><a href="#容器命令" aria-hidden="true" class="header-anchor">#</a> 容器命令</h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>//查看正在运行的docker容器
+docker <span class="token function">ps</span>
+//查看所有的容器
+docker <span class="token function">ps</span> -a
+//查看所有容器并显示容器大小
+docker <span class="token function">ps</span> -as
+
+//运行容器
+docker start CONTAINER
+
+//进入容器
+docker <span class="token function">exec</span> -i -t -d CONTAINER
+
+-i: 即使没有附加也保持STDIN 打开
+-t: 分配一个伪终端
+-d: 分离模式: 在后台运行
+
+//停止容器
+docker stop CONTAINER
+
+//对容器重命名
+docker <span class="token function">rename</span> OLD_NAME NEW_NAME
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></div> <!----> <div id="valine" data-v-1884cf5c></div> <!----> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.b695821b.js" defer></script><script src="/assets/js/10.17745ebd.js" defer></script>
+  </body>
+</html>
